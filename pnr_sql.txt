@@ -1,0 +1,1 @@
+SELECT p.passenger_name,p.age,p.gender,t.train_id,t.train_name,p.PNR,p.seat_number,t.src_stn,t.trgt_stn,r.resrv_date,r.resrv_sts FROM passenger p JOIN passenger_ticket pt ON p.PNR=pt.PNR JOIN reservation r ON r.PNR JOIN train t ON t.train_id WHERE p.PNR='957612184';

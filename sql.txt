@@ -1,0 +1,1 @@
+SELECT * FROM `train` JOIN train_status ON train.train_id=train_status.train_id WHERE `src_id` = 'EKM' AND `trgt_id` = 'CHY' AND `train_type` = 'AC First Class' AND train_status.avail_date='2018-11-10';
