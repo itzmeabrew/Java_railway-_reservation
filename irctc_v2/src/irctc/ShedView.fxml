@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="558.0" prefWidth="1048.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="irctc.SchedViewController">
+   <children>
+      <TableView fx:id="table" layoutX="200.0" layoutY="148.0" prefHeight="496.0" prefWidth="906.0" stylesheets="@application.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="tid" prefWidth="68.0" text="Train ID" />
+          <TableColumn fx:id="tname" prefWidth="157.0" text="Train Name" />
+            <TableColumn fx:id="ttype" prefWidth="108.80006408691406" text="Train Type" />
+            <TableColumn fx:id="dep" prefWidth="154.0" text="Departure Station" />
+            <TableColumn fx:id="arr" minWidth="0.0" prefWidth="136.0" text="Arrival Station" />
+            <TableColumn fx:id="stp" minWidth="0.0" prefWidth="106.0" text="Stop Number" />
+            <TableColumn fx:id="dtime" minWidth="5.5999755859375" prefWidth="126.0" text="Departure Time" />
+            <TableColumn fx:id="atime" minWidth="1.0" prefWidth="102.0" text="Arrival Time" />
+            <TableColumn fx:id="dst" minWidth="0.0" prefWidth="78.0" text="Distance" />
+        </columns>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </TableView>
+   </children>
+</AnchorPane>

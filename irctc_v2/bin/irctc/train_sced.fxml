@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="341.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="irctc.TrainScedController">
+   <children>
+      <ImageView fitHeight="473.0" fitWidth="552.0" layoutX="-52.0" layoutY="-2.0" opacity="0.38" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@bg4.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="69.0" layoutY="40.0" prefHeight="226.0" prefWidth="310.0" style="-fx-background-color: #f11f57; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);">
+         <children>
+            <TextField fx:id="stnID" layoutX="20.0" layoutY="99.0" prefHeight="29.0" prefWidth="271.0" promptText="Enter Train ID" text="Enter Train ID" />
+            <JFXButton fx:id="srch" layoutX="89.0" layoutY="144.0" onAction="#Station_sced" prefHeight="36.0" prefWidth="133.0" style="-fx-background-color: #17e84f;" text="Search Schedule" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="72.0" fitWidth="65.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@5.png" />
+               </image>
+            </ImageView>
+            <Text fill="#f2f2f2" layoutX="89.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Train Schedule" textAlignment="CENTER">
+               <font>
+                  <Font name="Eras Bold ITC" size="23.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="-39.0" layoutY="281.0" prefHeight="123.0" prefWidth="534.0" style="-fx-background-color: #ffff;">
+         <effect>
+            <InnerShadow blurType="GAUSSIAN" />
+         </effect>
+         <children>
+            <JFXButton id="button" fx:id="home" layoutX="424.0" minHeight="56.0" onAction="#home_ret" prefHeight="58.0" prefWidth="65.0" style="-fx-background-image: url('file:///E:/My%20Library/Documents/Java/irctc_v2/src/irctc/home.png'); -fx-background-repeat: no-repeat;" stylesheets="@application.css" text=" " textFill="#ede99b" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

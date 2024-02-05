@@ -1,0 +1,1 @@
+SELECT train.train_id,train.train_name,train.train_type,train.src_stn,train.trgt_stn,route.stop_nmbr,route.arr_time,route.dep_time,route.src_dstn FROM `train` JOIN route ON train.train_id=route.train_id WHERE train.train_id='12431';

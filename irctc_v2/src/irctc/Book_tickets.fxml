@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="658.0" prefWidth="680.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="irctc.Book_ticketsController">
+   <children>
+      <ImageView fitHeight="631.0" fitWidth="1032.0" layoutY="-8.0" opacity="0.6" pickOnBounds="true">
+         <image>
+            <Image url="@bg6.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="116.0" layoutY="28.0" prefHeight="534.0" prefWidth="448.0" style="-fx-background-color: #f442e8; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" AnchorPane.bottomAnchor="95.60000000000002" AnchorPane.leftAnchor="116.0" AnchorPane.rightAnchor="116.0" AnchorPane.topAnchor="28.0">
+         <children>
+            <ImageView fitHeight="88.0" fitWidth="76.0" layoutX="54.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@book.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="fname" layoutX="17.0" layoutY="134.0" prefHeight="31.0" prefWidth="412.0" promptText="Full Name" />
+            <ChoiceBox fx:id="cls" layoutX="266.0" layoutY="348.0" prefHeight="28.0" prefWidth="162.0" />
+            <DatePicker fx:id="date" layoutX="20.0" layoutY="348.0" prefHeight="28.0" prefWidth="162.0" promptText="Select Date" />
+            <Text layoutX="182.0" layoutY="419.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gender :" textAlignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <TextField fx:id="email" layoutX="17.0" layoutY="174.0" prefHeight="31.0" prefWidth="412.0" promptText="E Mail" />
+            <TextField fx:id="mob" layoutX="17.0" layoutY="217.0" prefHeight="31.0" prefWidth="412.0" promptText="Mobile No." />
+            <JFXRadioButton fx:id="male" layoutX="265.0" layoutY="398.0" text="Male" textAlignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="gen" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="female" layoutX="343.0" layoutY="398.0" text="Female" textAlignment="CENTER">
+               <toggleGroup>
+                  <ToggleGroup fx:id="gen" />
+               </toggleGroup>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXRadioButton>
+            <TextField fx:id="age" layoutX="193.0" layoutY="347.0" prefHeight="31.0" prefWidth="60.0" promptText="Age" />
+            <JFXButton fx:id="book" layoutX="70.0" layoutY="446.0" onAction="#book_now" prefHeight="46.0" prefWidth="308.0" style="-fx-background-color: #ea1e1e;" text="Book Now" textAlignment="CENTER" textFill="#f8f8f8">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <TextField fx:id="dep" layoutX="18.0" layoutY="258.0" prefHeight="31.0" prefWidth="412.0" promptText="Enter Departure" />
+            <TextField fx:id="arr" layoutX="18.0" layoutY="301.0" prefHeight="31.0" prefWidth="412.0" promptText="Enter Arrival" />
+            <TextField fx:id="stno" layoutX="20.0" layoutY="396.0" prefHeight="31.0" prefWidth="118.0" promptText="Seat No" />
+            <Text fill="WHITE" layoutX="138.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Your Tickets Here" textAlignment="CENTER" wrappingWidth="254.77154541015625">
+               <font>
+                  <Font name="Cooper Black" size="28.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="-46.0" layoutY="599.0" prefHeight="101.0" prefWidth="752.0" style="-fx-background-color: #ffff;">
+         <effect>
+            <InnerShadow blurType="GAUSSIAN" />
+         </effect>
+         <children>
+            <JFXButton id="button" fx:id="home" layoutX="631.0" minHeight="56.0" onAction="#home_ret" prefHeight="58.0" prefWidth="64.0" style="-fx-background-image: url('file:///E:/My%20Library/Documents/Java/irctc_v2/src/irctc/home.png'); -fx-background-repeat: no-repeat;" stylesheets="@application.css" text=" " textFill="#ede99b" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

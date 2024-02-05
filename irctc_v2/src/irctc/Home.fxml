@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="508.0" prefWidth="568.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="irctc.HomeController">
+   <children>
+      <BorderPane layoutX="-1.0" prefHeight="405.0" prefWidth="433.0" style="-fx-background-color: #ffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="0.39999999999997726" AnchorPane.topAnchor="0.0">
+         <center>
+            <Pane prefHeight="450.0" prefWidth="594.0" style="-fx-background-image: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;?import com.jfoenix.controls.JFXButton?&gt;&lt;JFXButton id=&quot;button&quot; layoutX=&quot;50.0&quot; layoutY=&quot;133.0&quot; minHeight=&quot;56.0&quot; prefHeight=&quot;94.0&quot; prefWidth=&quot;92.0&quot; style=&quot;-fx-background-image: url('file:///E:/My%20Library/Documents/Java/irctc_v2/src/irctc/3.png'); -fx-background-repeat: no-repeat;&quot; stylesheets=&quot;@application.css&quot; text=&quot; &quot; textFill=&quot;#975656&quot; xmlns=&quot;http://javafx.com/javafx/10.0.1&quot; xmlns:fx=&quot;http://javafx.com/fxml/1&quot; /&gt;;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="562.0" fitWidth="893.0" layoutX="-228.0" layoutY="-85.0" opacity="0.29" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@bg2.jpg" />
+                     </image>
+                  </ImageView>
+                  <Pane layoutX="130.0" layoutY="55.0" prefHeight="258.0" prefWidth="311.0" style="-fx-background-color: #ffff; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0); -fx-background-radius: 5;">
+                     <children>
+                        <JFXButton id="button" fx:id="book" layoutX="182.0" layoutY="23.0" minHeight="56.0" onAction="#bookNow" prefHeight="94.0" prefWidth="92.0" ripplerFill="#3a7fe8" style="-fx-background-image: url('file:///E:/My%20Library/Documents/Java/irctc_v2/src/irctc/icons8-train-96.png'); -fx-background-repeat: no-repeat;" stylesheets="@application.css" text=" " textFill="#975656" />
+                        <JFXButton id="button" fx:id="sced" layoutX="37.0" layoutY="142.0" minHeight="56.0" onAction="#schedule" prefHeight="94.0" prefWidth="92.0" ripplerFill="#3e81e5" style="-fx-background-image: url('file:///E:/My%20Library/Documents/Java/irctc_v2/src/irctc/3.png'); -fx-background-repeat: no-repeat;" stylesheets="@application.css" text=" " textFill="#975656" />
+                        <JFXButton id="button" fx:id="srch" layoutX="37.0" layoutY="23.0" minHeight="56.0" onAction="#train_search" prefHeight="94.0" prefWidth="92.0" ripplerFill="#3b81ea" style="-fx-background-image: url('file:///E:/My%20Library/Documents/Java/irctc_v2/src/irctc/1m.png'); -fx-background-repeat: no-repeat;" stylesheets="@application.css" text=" " textFill="#975656" />
+                        <JFXButton id="button" fx:id="pnr" layoutX="187.0" layoutY="148.0" minHeight="56.0" onAction="#pnr_status" prefHeight="82.0" prefWidth="82.0" ripplerFill="#3e81e5" style="-fx-background-image: url('file:///E:/My%20Library/Documents/Java/irctc_v2/src/irctc/pnr.png'); -fx-background-repeat: no-repeat;" stylesheets="@application.css" text=" " textFill="#975656" />
+                     </children>
+                     <effect>
+                        <Lighting bumpInput="$null" diffuseConstant="1.8" specularConstant="0.0" specularExponent="7.6">
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </effect>
+                     <opaqueInsets>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </opaqueInsets>
+                  </Pane>
+               </children>
+            </Pane>
+         </center>
+         <bottom>
+            <Pane prefHeight="69.0" prefWidth="569.0" style="-fx-background-color: #ffff;" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton id="button" layoutX="501.0" layoutY="3.0" minHeight="56.0" onAction="#log_out" prefHeight="64.0" prefWidth="61.0" style="-fx-background-image: url('file:///E:/My%20Library/Documents/Java/irctc_v2/src/irctc/4.png'); -fx-background-repeat: no-repeat;" stylesheets="@application.css" text=" " textFill="#ede99b" />
+               </children>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Pane>
+         </bottom>
+         <top>
+            <Pane prefHeight="71.0" prefWidth="569.0" style="-fx-background-color: #5089e5;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="name_lbl" layoutX="189.0" layoutY="44.0" prefHeight="27.0" prefWidth="381.0" text="Welcome to your Dashboard" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Text fill="WHITE" layoutX="14.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IRCTC" textAlignment="CENTER" wrappingWidth="174.93676376342773">
+                     <font>
+                        <Font name="Gabriola" size="52.0" />
+                     </font>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Text>
+               </children></Pane>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

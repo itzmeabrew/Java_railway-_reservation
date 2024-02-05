@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="651.0" prefWidth="695.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="irctc.SignupController">
+   <center>
+      <AnchorPane prefHeight="652.0" prefWidth="730.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="734.0" fitWidth="1050.0" layoutX="75.0" layoutY="1.0" opacity="0.3" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="1.1499999999999773" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="0.599999999999909" AnchorPane.topAnchor="0.4500000000000455">
+               <image>
+                  <Image url="@../../../../../Pictures/IRCTC-introduces-Bharat-Darshan-trains-for-summer-vacation.jpg" />
+               </image>
+               <effect>
+                  <ColorAdjust brightness="0.04" contrast="-0.21" hue="1.0" />
+               </effect>
+            </ImageView>
+            <Pane layoutX="267.0" layoutY="65.0" prefHeight="578.0" prefWidth="590.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="267.0" AnchorPane.rightAnchor="268.19999999999993" AnchorPane.topAnchor="65.0">
+               <children>
+                  <Text layoutX="251.0" layoutY="294.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gender :" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="email" layoutX="23.0" layoutY="178.0" prefHeight="36.0" prefWidth="317.0" promptText="E Mail" />
+                  <TextField fx:id="fname" layoutX="23.0" layoutY="135.0" prefHeight="36.0" prefWidth="545.0" promptText="Full Name" />
+                  <PasswordField fx:id="pass" layoutX="23.0" layoutY="221.0" prefHeight="36.0" prefWidth="255.0" promptText="Password" />
+                  <TextField fx:id="age" layoutX="23.0" layoutY="269.0" prefHeight="36.0" promptText="Age" />
+                  <PasswordField fx:id="pass2" layoutX="313.0" layoutY="221.0" prefHeight="36.0" prefWidth="255.0" promptText="Confirm Password" />
+                  <TextField fx:id="mob" layoutX="23.0" layoutY="314.0" prefHeight="36.0" prefWidth="545.0" promptText="Mobile No." />
+                  <TextField fx:id="state" layoutX="23.0" layoutY="356.0" prefHeight="36.0" prefWidth="545.0" promptText="State" />
+                  <TextField fx:id="city" layoutX="23.0" layoutY="398.0" prefHeight="36.0" prefWidth="545.0" promptText="City" />
+                  <JFXRadioButton fx:id="male" layoutX="334.0" layoutY="273.0" selected="true" text="Male" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="gen" />
+                     </toggleGroup>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="female" layoutX="412.0" layoutY="273.0" selected="true" text="Female" textAlignment="CENTER" toggleGroup="$gen">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <JFXButton fx:id="register" layoutX="84.0" layoutY="455.0" onAction="#signup" prefHeight="47.0" prefWidth="147.0" ripplerFill="#1400ea" style="-fx-background-color: #5391f4;" text="Register Now" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </JFXButton>
+                  <TextField fx:id="uname" layoutX="344.0" layoutY="178.0" prefHeight="36.0" prefWidth="224.0" promptText="User Name" />
+                  <Label fx:id="sts" layoutX="159.0" layoutY="516.0" prefHeight="38.0" prefWidth="274.0" textAlignment="CENTER" textFill="RED">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Text fill="WHITE" layoutX="31.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign Up ." textAlignment="CENTER" wrappingWidth="301.3368225097656">
+                     <font>
+                        <Font name="Berlin Sans FB" size="64.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Text>
+                  <JFXButton fx:id="ret" layoutX="338.0" layoutY="455.0" onAction="#cancel" prefHeight="47.0" prefWidth="147.0" ripplerFill="#eb1e97" style="-fx-background-color: #e80000;" text="Log-In" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
